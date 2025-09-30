@@ -1,16 +1,19 @@
 {
-  "name": "AI Workshop Agents",
-  "image": "mcr.microsoft.com/devcontainers/python:3.10",   // Base image
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {}
+  "name": "Agenten und Tools",
+  "build": {
+    "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "pip install -r requirements.txt",   // Install Python libs
   "customizations": {
     "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.languageServer": "Pylance"
+      },
       "extensions": [
-        "ms-toolsai.jupyter",   // Jupyter in VS Code
-        "ms-python.python"      // Python extension
+        "ms-python.python",
+        "ms-toolsai.jupyter"
       ]
     }
-  }
+  },
+  "postCreateCommand": "pip install -r requirements.txt"
 }
