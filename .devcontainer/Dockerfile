@@ -2,10 +2,10 @@
 FROM mcr.microsoft.com/devcontainers/python:3.11
 
 # Set working directory
-WORKDIR /workspace
+WORKDIR /workspaces/${LOCAL_WORKSPACE_FOLDER}
 
 # Copy requirements early (so Codespaces can cache installs)
-COPY requirements.txt /workspace/requirements.txt
+COPY requirements.txt .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -r /workspace/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
