@@ -1,6 +1,5 @@
-# Core HF libraries
-transformers>=4.44.0
-accelerate>=0.33.0
+# Open AI
+openai>=1.40.0
 
 # Data + APIs
 wikipedia>=1.4.0
