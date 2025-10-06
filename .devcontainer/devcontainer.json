@@ -5,10 +5,6 @@
   },
   "customizations": {
     "vscode": {
-      "settings": {
-        "python.defaultInterpreterPath": "/usr/local/bin/python",
-        "python.languageServer": "Pylance"
-      },
       "extensions": [
         "ms-python.python",
         "ms-toolsai.jupyter"
