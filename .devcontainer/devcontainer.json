@@ -1,15 +1,16 @@
 {
   "name": "Agenten und Tools",
-  "build": {
-    "dockerfile": "Dockerfile"
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",   // Base image
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
   },
+  "postCreateCommand": "pip install -r requirements.txt",   // Install Python libs
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-python.python",
-        "ms-toolsai.jupyter"
+        "ms-toolsai.jupyter",   // Jupyter in VS Code
+        "ms-python.python"      // Python extension
       ]
     }
-  },
-  "postCreateCommand": "pip install -r requirements.txt"
+  }
 }
