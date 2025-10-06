@@ -1,15 +1,20 @@
 {
   "name": "Agenten und Tools",
-  "image": "mcr.microsoft.com/devcontainers/python:3.10",   // Base image
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {}
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "hostRequirements": {
+    "cpus": 4
   },
-  "postCreateCommand": "pip install -r requirements.txt",   // Install Python libs
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "python3 -m pip install -r requirements.txt",
+  "postCreateCommand": "",
   "customizations": {
+    "codespaces": {
+      "openFiles": []
+    },
     "vscode": {
       "extensions": [
-        "ms-toolsai.jupyter",   // Jupyter in VS Code
-        "ms-python.python"      // Python extension
+        "ms-toolsai.jupyter",
+        "ms-python.python"
       ]
     }
   }
