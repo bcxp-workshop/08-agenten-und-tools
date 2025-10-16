@@ -1,4 +1,4 @@
-# 🤖 Willkommen zum Workshop: Agenten und Tools
+# Agenten und Tools: Wie Tools die Fähigkeiten eines LLMs erweitern
 
 In diesem Workshop erstellen und erkunden wir einen **KI-Agenten**, der auf einem einfachen OpenAI-Modell basiert.  
 Wir lernen Schritt für Schritt, wie dieser **folgert** (*= Reason*), **handelt** (*= Act*) und **Tools einsetzt**, um Probleme zu lösen - Schritt für Schritt.
